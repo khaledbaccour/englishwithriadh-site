@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: "English with Riadh — Learn English with a Fulbright Scholar",
   description:
     "Premium English instruction by Riadh Koubaa. 17 years teaching, Fulbright Scholar at UC Santa Barbara, certified trainer from Arizona State University.",
-  icons: { icon: "/images/favicon.png" },
 };
 
 export const viewport: Viewport = {
