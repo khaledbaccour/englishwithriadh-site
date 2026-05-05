@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
+import { Logo } from "@/components/Logo";
 import { LangSwitcher } from "./LangSwitcher";
 import { MobileDrawer } from "./MobileDrawer";
 import { getMessages, type Locale } from "@/lib/i18n";
@@ -25,9 +26,7 @@ export function Navbar({ locale }: { locale: Locale }) {
           aria-label={messages.meta.site_name}
           className="flex items-center gap-2 text-[var(--color-ink-900)] font-bold text-lg shrink-0"
         >
-          <span className="inline-flex items-center justify-center w-11 h-11 rounded-md bg-[var(--color-primary-500)] text-white font-bold">
-            R
-          </span>
+          <Logo className="w-11 h-11 rounded-md" />
           <span className="hidden sm:inline">{messages.meta.site_name}</span>
         </Link>
 
