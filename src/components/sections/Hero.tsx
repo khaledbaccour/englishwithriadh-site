@@ -13,7 +13,7 @@ export function Hero({
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[var(--color-ink-50)] to-white">
-      <Container className="relative grid gap-10 py-12 sm:gap-12 sm:py-16 lg:py-24 lg:grid-cols-[1.1fr_1fr] items-center">
+      <Container className="relative grid gap-8 py-10 sm:gap-12 sm:py-16 lg:py-24 lg:grid-cols-[1.1fr_1fr] items-center">
         <div className="flex flex-col items-start gap-6">
           <Badge tone="primary" className="px-3 py-1.5">
             {messages.hero.eyebrow}
@@ -57,11 +57,13 @@ export function Hero({
         </div>
 
         <div className="relative px-2 sm:px-0">
-          <div className="relative aspect-[4/5] w-full max-w-sm sm:max-w-md mx-auto rounded-[var(--radius-xl)] overflow-hidden bg-[var(--color-ink-100)]">
+          <div className="relative aspect-[4/5] w-full max-w-[20rem] sm:max-w-md mx-auto rounded-[var(--radius-xl)] overflow-hidden bg-[var(--color-ink-100)]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/riadh-portrait.png"
               alt="Riadh Koubaa"
+              loading="eager"
+              fetchPriority="high"
               className="w-full h-full object-cover"
             />
           </div>
