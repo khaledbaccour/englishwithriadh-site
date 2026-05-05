@@ -47,7 +47,7 @@ export default async function CourseDetailPage({
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
             <div>
-              <div className="flex items-center gap-3 mb-5">
+              <div className="flex flex-wrap items-center gap-3 mb-5">
                 {course.comingSoon ? (
                   <Badge tone="warning">{messages.courses_page.coming_soon}</Badge>
                 ) : (

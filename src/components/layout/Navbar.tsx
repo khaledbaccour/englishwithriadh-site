@@ -22,9 +22,10 @@ export function Navbar({ locale }: { locale: Locale }) {
       <Container className="h-[72px] flex items-center gap-6">
         <Link
           href={`/${locale}/`}
+          aria-label={messages.meta.site_name}
           className="flex items-center gap-2 text-[var(--color-ink-900)] font-bold text-lg shrink-0"
         >
-          <span className="inline-flex items-center justify-center w-9 h-9 rounded-md bg-[var(--color-primary-500)] text-white font-bold">
+          <span className="inline-flex items-center justify-center w-11 h-11 rounded-md bg-[var(--color-primary-500)] text-white font-bold">
             R
           </span>
           <span className="hidden sm:inline">{messages.meta.site_name}</span>
@@ -42,7 +43,14 @@ export function Navbar({ locale }: { locale: Locale }) {
           ))}
         </nav>
 
-        <div className="ms-auto flex items-center gap-2">
+        <div className="ms-auto flex items-center gap-1 sm:gap-2">
+          <a
+            href="tel:+21625102107"
+            aria-label="+216 25 102 107"
+            className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-md text-[var(--color-ink-700)] hover:bg-[var(--color-ink-100)] transition"
+          >
+            <Phone size={20} strokeWidth={2} />
+          </a>
           <a
             href="tel:+21625102107"
             className="hidden md:inline-flex items-center gap-1.5 h-10 px-3 rounded-md text-sm font-semibold text-[var(--color-ink-700)] hover:bg-[var(--color-ink-100)] transition"

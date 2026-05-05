@@ -37,7 +37,7 @@ export function CourseCard({
         </div>
 
         <Link href={href} className="block">
-          <h3 className="text-[18px] font-bold leading-snug text-[var(--color-ink-900)] hover:text-[var(--color-primary-600)] transition">
+          <h3 className="text-base sm:text-[18px] font-bold leading-snug text-[var(--color-ink-900)] hover:text-[var(--color-primary-600)] transition">
             {course.title[locale]}
           </h3>
         </Link>
@@ -47,28 +47,28 @@ export function CourseCard({
         </p>
 
         {!course.comingSoon && (
-          <div className="flex items-center gap-1.5 text-xs text-[var(--color-ink-500)]">
+          <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs text-[var(--color-ink-500)]">
             <span>
               {course.lessons} {messages.courses_page.lessons}
             </span>
-            <span>·</span>
+            <span aria-hidden>·</span>
             <span>
               {course.hours} {messages.courses_page.hours}
             </span>
-            <span>·</span>
+            <span aria-hidden>·</span>
             <span>
               {course.students} {messages.courses_page.students}
             </span>
           </div>
         )}
 
-        <div className="flex items-end justify-between mt-2 pt-3 border-t border-[var(--color-ink-100)]">
+        <div className="flex flex-wrap items-end justify-between gap-3 mt-2 pt-3 border-t border-[var(--color-ink-100)]">
           {course.comingSoon ? (
             <span className="text-sm text-[var(--color-ink-500)]">
               {messages.courses_page.coming_soon}
             </span>
           ) : (
-            <div className="flex items-baseline gap-2">
+            <div className="flex flex-wrap items-baseline gap-2">
               {course.oldPriceTND && (
                 <span className="text-sm text-[var(--color-ink-400)] line-through">
                   {formatPriceTND(course.oldPriceTND, locale)}
@@ -79,7 +79,7 @@ export function CourseCard({
               </span>
             </div>
           )}
-          <ButtonLink href={href} variant="ghost" size="sm" className="px-3">
+          <ButtonLink href={href} variant="ghost" size="sm" className="px-3 ms-auto">
             {messages.common.learn_more}
             <ArrowRight size={14} className="rtl:rotate-180" />
           </ButtonLink>

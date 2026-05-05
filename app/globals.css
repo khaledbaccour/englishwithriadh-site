@@ -70,9 +70,9 @@ video {
   max-width: 100%;
 }
 
-/* hide horizontal overflow on RTL chrome quirks */
-html[dir="rtl"] {
-  overflow-x: hidden;
+/* prevent stray decorative overflow from causing horizontal scroll on any locale */
+body {
+  overflow-x: clip;
 }
 
 /* native focus ring polish */

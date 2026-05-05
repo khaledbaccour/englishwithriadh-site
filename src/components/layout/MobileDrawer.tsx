@@ -1,15 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
 import { LangSwitcher } from "./LangSwitcher";
 import { type Locale, getMessages } from "@/lib/i18n";
 
 export function MobileDrawer({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const messages = getMessages(locale);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (open) document.body.style.overflow = "hidden";
@@ -33,12 +39,12 @@ export function MobileDrawer({ locale }: { locale: Locale }) {
         type="button"
         aria-label={messages.nav.menu}
         onClick={() => setOpen(true)}
-        className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-md hover:bg-[var(--color-ink-100)] transition"
+        className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-md hover:bg-[var(--color-ink-100)] transition"
       >
         <Menu size={22} strokeWidth={2} />
       </button>
 
-      {open && (
+      {open && mounted && createPortal(
         <div className="lg:hidden fixed inset-0 z-[100]">
           <div
             className="absolute inset-0 bg-black/30 backdrop-blur-sm"
@@ -52,7 +58,7 @@ export function MobileDrawer({ locale }: { locale: Locale }) {
               <button
                 aria-label={messages.nav.close}
                 onClick={() => setOpen(false)}
-                className="inline-flex items-center justify-center w-10 h-10 rounded-md hover:bg-[var(--color-ink-100)]"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-md hover:bg-[var(--color-ink-100)]"
               >
                 <X size={20} />
               </button>
@@ -70,9 +76,20 @@ export function MobileDrawer({ locale }: { locale: Locale }) {
               ))}
             </nav>
             <div className="p-5 border-t border-[var(--color-ink-200)] flex flex-col gap-3">
-              <ButtonLink href={`/${locale}/reservation/`} variant="primary" className="w-full">
+              <ButtonLink
+                href={`/${locale}/reservation/`}
+                variant="primary"
+                className="w-full justify-center"
+              >
                 {messages.nav.book_session}
               </ButtonLink>
+              <a
+                href="tel:+21625102107"
+                className="flex items-center justify-center gap-2 h-11 rounded-md border border-[var(--color-ink-200)] text-sm font-semibold text-[var(--color-ink-700)] hover:bg-[var(--color-ink-50)]"
+              >
+                <Phone size={16} strokeWidth={2} />
+                +216 25 102 107
+              </a>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-[var(--color-ink-500)]">
                   {messages.lang.label}
@@ -81,7 +98,8 @@ export function MobileDrawer({ locale }: { locale: Locale }) {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </>
   );
