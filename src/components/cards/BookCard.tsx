@@ -24,18 +24,18 @@ export function BookCard({
       <CardBody className="flex flex-col gap-3">
         <RatingStars value={book.rating} count={book.ratingCount} />
         <Link href={href}>
-          <h3 className="text-[17px] font-bold leading-snug text-[var(--color-ink-900)] hover:text-[var(--color-primary-600)] transition">
+          <h3 className="text-[15px] sm:text-[17px] font-bold leading-snug text-[var(--color-ink-900)] hover:text-[var(--color-primary-600)] transition">
             {book.title[locale]}
           </h3>
         </Link>
         <p className="text-sm text-[var(--color-ink-500)] leading-relaxed line-clamp-2">
           {book.shortDescription[locale]}
         </p>
-        <div className="flex items-center justify-between mt-2 pt-3 border-t border-[var(--color-ink-100)]">
+        <div className="flex flex-wrap items-center justify-between gap-3 mt-2 pt-3 border-t border-[var(--color-ink-100)]">
           <span className="text-lg font-bold text-[var(--color-ink-900)]">
             {formatPriceTND(book.priceTND, locale)}
           </span>
-          <ButtonLink href={href} variant="primary" size="sm">
+          <ButtonLink href={href} variant="primary" size="sm" className="ms-auto">
             {messages.books_page.buy_now}
           </ButtonLink>
         </div>

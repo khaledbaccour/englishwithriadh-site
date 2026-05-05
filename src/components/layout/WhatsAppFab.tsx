@@ -13,7 +13,8 @@ export function WhatsAppFab({ locale }: { locale: Locale }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp"
-      className="fixed bottom-6 end-6 z-30 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[var(--shadow-floating)] hover:bg-[#1ebe5b] hover:scale-105 transition"
+      className="fixed end-4 sm:end-6 z-40 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[var(--shadow-floating)] hover:bg-[#1ebe5b] hover:scale-105 transition"
+      style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 1rem)" }}
     >
       <MessageCircle size={24} strokeWidth={2.2} />
     </a>

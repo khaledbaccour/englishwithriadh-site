@@ -22,9 +22,9 @@ export function Footer({ locale }: { locale: Locale }) {
   const messages = getMessages(locale);
 
   return (
-    <footer className="bg-[var(--color-ink-50)] border-t border-[var(--color-ink-200)] mt-24">
-      <Container className="py-14">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-[var(--color-ink-50)] border-t border-[var(--color-ink-200)] mt-16 sm:mt-20 lg:mt-24 pb-20 lg:pb-0">
+      <Container className="py-12 sm:py-14">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link
               href={`/${locale}/`}
@@ -96,11 +96,11 @@ export function Footer({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-[var(--color-ink-200)] flex flex-wrap items-center justify-between gap-4 text-xs text-[var(--color-ink-500)]">
+        <div className="mt-12 pt-6 border-t border-[var(--color-ink-200)] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-center sm:text-start text-xs text-[var(--color-ink-500)]">
           <span>
             © {new Date().getFullYear()} {messages.meta.site_name}. {messages.footer.rights}
           </span>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center sm:justify-end gap-4">
             <Link href={`/${locale}/privacy/`} className="hover:text-[var(--color-ink-900)]">
               {messages.footer.privacy}
             </Link>
