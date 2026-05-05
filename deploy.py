@@ -9,6 +9,7 @@ import os, sys, argparse, pathlib, paramiko
 from paramiko import SSHClient, AutoAddPolicy
 
 REMOTE_DIR  = "/srv/riadh"
+LOCAL_BUILD = "out"  # Next.js static export output directory
 CADDY_BLOCK = """
 ### English With Riadh Koubaa
 riadh.51-77-148-106.nip.io {
@@ -29,9 +30,10 @@ riadh.51-77-148-106.nip.io {
 """
 
 STATIC_EXTS = {
-    ".html", ".css", ".js", ".png", ".jpg", ".jpeg",
-    ".webp", ".gif", ".svg", ".ico", ".woff", ".woff2",
-    ".ttf", ".txt", ".json",
+    ".html", ".css", ".js", ".mjs", ".map",
+    ".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".ico",
+    ".woff", ".woff2", ".ttf", ".otf",
+    ".txt", ".json", ".xml", ".webmanifest",
 }
 
 def parse_args():
@@ -84,11 +86,13 @@ def upload_site(client, local_root: pathlib.Path):
     for local_path in local_root.rglob("*"):
         if local_path.is_dir():
             continue
-        if local_path.suffix.lower() not in STATIC_EXTS:
-            continue
         # Skip hidden / git / github dirs
         parts = local_path.relative_to(local_root).parts
         if any(p.startswith(".") for p in parts):
+            continue
+        if local_path.suffix.lower() not in STATIC_EXTS:
+            # Pages from Next have no extension when generated as directories+index.html;
+            # other static assets always carry a known extension. Skip unknown ones.
             continue
 
         rel      = local_path.relative_to(local_root)
@@ -130,7 +134,13 @@ def main():
     args = parse_args()
 
     print(f"\n=== Deploying to {args.host} as {args.user} ===\n")
-    local_root = pathlib.Path(__file__).parent.resolve()
+    repo_root = pathlib.Path(__file__).parent.resolve()
+    local_root = repo_root / LOCAL_BUILD
+    if not local_root.is_dir():
+        raise SystemExit(
+            f"Build output not found at {local_root}. Run `npm run build` first."
+        )
+    print(f"Source: {local_root}")
 
     client = SSHClient()
     client.set_missing_host_key_policy(AutoAddPolicy())

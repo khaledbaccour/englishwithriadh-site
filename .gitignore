@@ -1,5 +1,11 @@
 __pycache__/
 *.pyc
 .env
+.env.local
 *.bak
 node_modules/
+.next/
+out/
+*.log
+.DS_Store
+.claude/

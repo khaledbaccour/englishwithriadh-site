@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "site_name": "English with Riadh",
+    "tagline": "Learn English with a Fulbright Scholar",
+    "description": "Premium English instruction by Riadh Koubaa — 17 years teaching, Fulbright Scholar at UC Santa Barbara, certified trainer from Arizona State University. Courses, books, and 1-on-1 sessions for students and professionals across Tunisia."
+  },
+  "nav": {
+    "courses": "Courses",
+    "books": "Books",
+    "about": "About",
+    "videos": "Videos",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "book_session": "Book a session",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "hero": {
+    "eyebrow": "Fulbright Scholar · Arizona State Certified",
+    "title_1": "Learn English",
+    "title_2": "the right way.",
+    "sub": "17 years of classroom experience. Real conversation, proven methods, and a teacher who genuinely tracks your progress lesson by lesson.",
+    "cta_primary": "Explore courses",
+    "cta_secondary": "Meet Riadh",
+    "trust_years": "Years teaching",
+    "trust_students": "Students taught",
+    "trust_videos": "YouTube lessons",
+    "credential_fulbright": "Fulbright Program",
+    "credential_fulbright_sub": "UC Santa Barbara",
+    "credential_asu": "Certified trainer",
+    "credential_asu_sub": "Arizona State University"
+  },
+  "categories": {
+    "title": "What would you like to learn?",
+    "sub": "From beginners to exam candidates — there is a clear path for every level.",
+    "conversation_title": "Conversational English",
+    "conversation_sub": "Real-life dialogues, pronunciation drills, and the confidence to speak in any context.",
+    "writing_title": "Writing skills",
+    "writing_sub": "Essays, professional emails, and academic writing — clear, structured, and impactful.",
+    "exams_title": "Exam preparation",
+    "exams_sub": "TOEFL, IELTS, Cambridge — strategy, mock tests, and pacing tailored to your target.",
+    "school_title": "School levels",
+    "school_sub": "Curriculum-aligned support for primary and secondary students across Tunisia."
+  },
+  "courses_section": {
+    "title": "Featured courses",
+    "sub": "Live online and in-person, in Sfax.",
+    "view_all": "View all courses"
+  },
+  "courses_page": {
+    "title": "All courses",
+    "sub": "Pick the level and format that fits your goals.",
+    "filter_all": "All",
+    "filter_conversation": "Conversation",
+    "filter_writing": "Writing",
+    "filter_exams": "Exam prep",
+    "filter_school": "School levels",
+    "coming_soon": "Coming soon",
+    "lessons": "Lessons",
+    "hours": "hours",
+    "students": "students",
+    "level": "Level",
+    "instructor": "Instructor",
+    "what_youll_learn": "What you will learn",
+    "syllabus": "Syllabus",
+    "reserve": "Reserve a seat",
+    "back_to_courses": "Back to courses"
+  },
+  "books_section": {
+    "title": "Workbooks for every grade",
+    "sub": "Extracurricular practice books written by Riadh, used by students across Tunisia.",
+    "view_all": "View all books"
+  },
+  "books_page": {
+    "title": "Books",
+    "sub": "Hand-crafted workbooks aligned with the Tunisian curriculum.",
+    "rating": "rating",
+    "reviews": "reviews",
+    "buy_now": "Order now",
+    "description": "Description",
+    "what_inside": "What is inside",
+    "back_to_books": "Back to books"
+  },
+  "about": {
+    "title": "Meet Riadh Koubaa",
+    "sub": "Seventeen years in the classroom, on three continents.",
+    "bio_p1": "Born and raised in Sfax, Riadh holds a Bachelor's degree in English from the University of Arts and Human Sciences of Sfax. He has taught English at Amra High School for the past seventeen years.",
+    "bio_p2": "In 2014 he was selected for the Fulbright Foreign Language Teaching Assistant program and spent a year at the University of California, Santa Barbara, teaching Arabic and immersing himself in American academic culture.",
+    "bio_p3": "He is a certified teacher trainer through Arizona State University and runs a YouTube channel followed by thousands of Tunisian learners. His work bridges classroom rigor with the conversational fluency students actually need.",
+    "qualifications": "Qualifications",
+    "experience": "Experience",
+    "gallery": "Gallery"
+  },
+  "stats": {
+    "years": "Years of teaching",
+    "students": "Students taught",
+    "videos": "YouTube lessons",
+    "courses": "Active courses"
+  },
+  "testimonials": {
+    "title": "What students say",
+    "sub": "Real students. Real progress."
+  },
+  "video_section": {
+    "title": "Watch a lesson before you book",
+    "sub": "Browse the YouTube channel and get a feel for the teaching style.",
+    "cta": "Open YouTube channel"
+  },
+  "cta_strip": {
+    "title": "Ready to start speaking with confidence?",
+    "sub": "Reserve a seat or book a 1-on-1 session today.",
+    "primary": "Reserve a seat",
+    "secondary": "Talk on WhatsApp"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "sub": "Reach out by form, phone, email, or WhatsApp — whichever you prefer.",
+    "form_title": "Send a message",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "address_value": "Sidi Mansour km 5, Sfax, Tunisia",
+    "hours": "Hours",
+    "hours_value": "Mon – Sat, 8:00 – 22:00",
+    "open_whatsapp": "Open WhatsApp"
+  },
+  "form": {
+    "name": "Full name",
+    "name_ph": "Your full name",
+    "phone": "Phone",
+    "phone_ph": "+216 xx xxx xxx",
+    "phone_alt": "Alternate phone (optional)",
+    "email": "Email",
+    "email_ph": "you@example.com",
+    "city": "City",
+    "city_ph": "Choose a governorate",
+    "status": "Status",
+    "status_ph": "I am a…",
+    "status_student": "Student",
+    "status_professional": "Professional",
+    "status_parent": "Parent",
+    "interest": "Interest",
+    "interest_ph": "What are you interested in?",
+    "interest_courses": "Courses",
+    "interest_books": "Books",
+    "interest_private": "Private lessons",
+    "interest_other": "Other",
+    "message": "Message",
+    "message_ph": "Tell Riadh what you want to achieve.",
+    "submit_contact": "Send via WhatsApp",
+    "submit_reserve": "Reserve a seat",
+    "required": "required",
+    "consent": "By submitting, your details open WhatsApp with a message ready to send."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "sub": "If you do not find your answer here, message Riadh directly on WhatsApp.",
+    "tabs": {
+      "online": "Online education",
+      "payment": "Payment method",
+      "pricing": "Pricing"
+    },
+    "items": {
+      "online_1_q": "Are courses fully online or in person?",
+      "online_1_a": "Both. Most courses run live online over Zoom; in-person sessions are held in Sfax.",
+      "online_2_q": "Do I need any special software?",
+      "online_2_a": "Just Zoom and a stable internet connection. Course materials are shared as PDF.",
+      "online_3_q": "What if I miss a lesson?",
+      "online_3_a": "Sessions are recorded so you can catch up. A makeup slot is available on request.",
+      "payment_1_q": "How can I pay?",
+      "payment_1_a": "Bank transfer (BIAT, BH, Attijari), D17, or cash on the first session.",
+      "payment_2_q": "Do you offer instalments?",
+      "payment_2_a": "Yes — a 50% deposit and a second 50% halfway through the course.",
+      "pricing_1_q": "Why is the price in Tunisian Dinar?",
+      "pricing_1_a": "All courses and books are billed in Tunisian Dinar (TND). No hidden fees.",
+      "pricing_2_q": "Are there discounts for groups?",
+      "pricing_2_a": "Yes. Bring three friends and each of you gets 15% off the listed price."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "sub": "Notes from the classroom — coming soon.",
+    "empty": "Posts will appear here shortly."
+  },
+  "footer": {
+    "tagline": "Learn English with a teacher who has spent seventeen years in the classroom and one year on a Fulbright in California.",
+    "quick_links": "Quick links",
+    "learn": "Learn",
+    "company": "Riadh",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "rights": "All rights reserved.",
+    "follow": "Follow"
+  },
+  "lang": {
+    "label": "Language",
+    "en": "English",
+    "ar": "العربية"
+  },
+  "common": {
+    "learn_more": "Learn more",
+    "from": "from",
+    "save": "Save"
+  }
+}
