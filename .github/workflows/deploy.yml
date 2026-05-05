@@ -1,0 +1,43 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install paramiko
+        run: pip install paramiko
+
+      - name: Deploy via SSH (paramiko)
+        env:
+          SSH_HOST:     ${{ secrets.SSH_HOST }}
+          SSH_USER:     ${{ secrets.SSH_USER }}
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        run: python deploy.py
+
+      - name: Verify site is up
+        run: |
+          sleep 3
+          HTTP=$(curl -s -o /dev/null -w "%{http_code}" \
+            --max-time 10 \
+            https://riadh.51-77-148-106.nip.io || echo "000")
+          echo "HTTP status: $HTTP"
+          if [ "$HTTP" = "200" ] || [ "$HTTP" = "301" ] || [ "$HTTP" = "302" ]; then
+            echo "Site is live!"
+          else
+            echo "Warning: got HTTP $HTTP — Caddy may still be reloading"
+          fi
