@@ -44,7 +44,7 @@ export const COURSES: Course[] = [
     ratingCount: 38,
     priceTND: 350,
     oldPriceTND: 500,
-    image: "/images/course-english-comm.webp",
+    image: "/images/course-conversation-1.webp",
     syllabus: {
       en: [
         "Lesson 1 — Sounds, stress, and self-introduction",
@@ -97,7 +97,7 @@ export const COURSES: Course[] = [
     ratingCount: 0,
     priceTND: null,
     comingSoon: true,
-    image: "/images/course-english-comm.webp",
+    image: "/images/course-conversation-2.webp",
     syllabus: { en: [], ar: [] },
     outcomes: { en: [], ar: [] },
   },
@@ -124,7 +124,7 @@ export const COURSES: Course[] = [
     ratingCount: 0,
     priceTND: null,
     comingSoon: true,
-    image: "/images/course-english-comm.webp",
+    image: "/images/course-exam-prep.webp",
     syllabus: { en: [], ar: [] },
     outcomes: { en: [], ar: [] },
   },
