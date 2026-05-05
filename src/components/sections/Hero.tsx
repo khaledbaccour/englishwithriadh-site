@@ -1,4 +1,4 @@
-import { Award, GraduationCap, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -65,20 +65,6 @@ export function Hero({
               className="w-full h-full object-cover"
             />
           </div>
-
-          <FloatingCard
-            className="absolute -top-3 start-3 lg:-start-8"
-            icon={<Award className="text-[var(--color-primary-600)]" size={20} />}
-            title={messages.hero.credential_fulbright}
-            sub={messages.hero.credential_fulbright_sub}
-          />
-
-          <FloatingCard
-            className="absolute -bottom-4 end-3 lg:-end-8"
-            icon={<GraduationCap className="text-[var(--color-primary-600)]" size={20} />}
-            title={messages.hero.credential_asu}
-            sub={messages.hero.credential_asu_sub}
-          />
         </div>
       </Container>
     </section>
@@ -102,34 +88,5 @@ function Divider() {
       className="hidden sm:inline-block w-px h-10 bg-[var(--color-ink-200)]"
       aria-hidden
     />
-  );
-}
-
-function FloatingCard({
-  icon,
-  title,
-  sub,
-  className,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  sub: string;
-  className?: string;
-}) {
-  return (
-    <div
-      className={
-        "bg-white rounded-[var(--radius-lg)] border border-[var(--color-ink-200)] shadow-[var(--shadow-floating)] px-4 py-3 flex items-center gap-3 max-w-[240px] " +
-        (className || "")
-      }
-    >
-      <span className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-[var(--color-primary-50)] shrink-0">
-        {icon}
-      </span>
-      <div className="leading-tight">
-        <div className="font-bold text-sm text-[var(--color-ink-900)]">{title}</div>
-        <div className="text-xs text-[var(--color-ink-500)] mt-0.5">{sub}</div>
-      </div>
-    </div>
   );
 }
